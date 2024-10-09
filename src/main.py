@@ -4,7 +4,7 @@ import redis
 import uvicorn
 
 
-redis_host = os.getenv('REDIS_IP')
+redis_host = os.getenv('REDIS_HOST')
 redis_port = os.getenv('REDIS_PORT')
 
 
