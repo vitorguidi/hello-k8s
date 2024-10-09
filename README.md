@@ -25,14 +25,12 @@ Install [KIND](https://kind.sigs.k8s.io/docs/user/quick-start/)
 
 Install [kubectl](https://kubernetes.io/docs/tasks/tools/)
 
-
 kind create cluster --config=./infra/kind-cluster.yaml
 
 kubectl apply ./infra/*
 
 kubectl port-forward service/inventory-service 8000:8000
 
-# Set an item
 curl localhost:8000/items/2/3 -X PUT
 
 curl localhost:8000/items/2
