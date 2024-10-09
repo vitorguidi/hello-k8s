@@ -30,4 +30,9 @@ kind create cluster --config=./infra/kind-cluster.yaml
 
 kubectl apply ./infra/*
 
-kubectl port-forward service/redis-service 2222:6379
+kubectl port-forward service/inventory-service 8000:8000
+
+# Set an item
+curl localhost:8000/items/2/3 -X PUT
+
+curl localhost:8000/items/2
